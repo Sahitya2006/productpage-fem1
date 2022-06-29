@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- monteserrit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+<!-- fraunces -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@100,200,300,400,500,600,700&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body{
+      background-color: hsl(30, 38%, 92%);
+    }
+
+    .container{
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 250px;
+    }
+    .container .right img{
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+    }
+
+    .container .textplace{
+      width: fit-content;
+      background-color: #fff;
+      padding: 5rem;
+      height: 290px;
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      text-align: left;
+      padding-left: 3rem;
+    }
+
+    .container .textplace h1{
+      font-family: 'Montserrat', sans-serif;
+      margin-top: -2rem;
+      font-size: 16px;
+      letter-spacing: 4px;
+      font-weight: 20;
+      color:hsl(228, 12%, 48%);
+      opacity: 0.9;
+      margin-left: -0.2rem;
+    }
+    /* font-family: 'Fraunces', serif; */
+
+    .container .textplace h2{
+      font-family: 'Fraunces', serif;
+      font-size: 30px;
+      padding: 20px 50px;
+      margin-left: -55px;
+      margin-top: -10px;
+      text-align: left;
+    }
+    .container .textplace p{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: lighter;
+      margin-top: -1.6rem;
+      text-align: left;
+      margin-left: -3px;
+      color:hsl(228, 12%, 48%);
+    }
+
+    .container .mobimg{
+      display: none;
+      border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    }
+
+    .container .textplace .allprices {
+      display: flex;
+      gap: 2.4rem;
+    }
+    .container .textplace .allprices .price{
+      color: hsl(158, 36%, 37%);
+      font-family: 'Fraunces', serif;
+       font-weight: 700;
+       font-size: 36px;
+       margin-top: 1rem;
+
+    }
+
+    .container .textplace .allprices .pricecut{
+      margin-top: 1.7rem;
+      text-decoration: line-through;
+      font-weight: lighter;
+    }
+
+    
+    .container .textplace button{
+        margin-top: -9rem;
+        padding: 1rem;
+        width: 300px;
+        border-radius: 8px;
+        background-color: hsl(158, 36%, 37%);
+        border: none;
+        color: #fff;
+        text-align: center;
+        margin-right: 5px;
+
+    }
+    .container .textplace button svg{
+      margin-left: -6px;
+      margin-right: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+
+      
+    .container .textplace button:hover{
+      cursor: pointer;
+      background-color: hsl(158, 36%, 22%);
+    }
+
+    .footlinks{
+        text-align: center;
+        margin-top: 10rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .footlinks a{
+      color: rgb(173, 101, 13);
+    }
+/* -----responsive */
+   @media (max-width: 700px){
+   .container{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-items: center;
+    align-items: center;
+    left: 5rem;
+   }
+   .container .mobimg{
+    display: flex;
+    margin-top: -35em;
+    position: absolute;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-right:5rem;
+   }
+
+   .container .textplace{
+    margin-left: -5rem;
+    width: 82%;
+    margin-top: 15rem;
+    text-align: center;
+   }
+   .container .textplace h1{
+    font-size: 25px;
+  
+   }
+   .container .right img{
+     display: none;
+   }
+
+   .footlinks{
+    display: none;
+   }
+
+  }
+
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- Preview
+
+  Gabrielle Essence Eau De Parfum
+
+  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+  Perfumer-Creator for the House of CHANEL.
+
+  $149.99
+  $169.99
+
+  Add to Cart -->
+
+
+ <div class="container">
+  <div class="mobimg"><img src="mob.jpg" width="600px"></div>
+  <div class="right"><img src="image.jpg" width="300px"></div>
+
+ <div class="textplace">
+  <h1>PERFUME</h1>
+  <h2>Gabrielle <br>EssenceEau De <br>Parfum</h2>
+
+  <p> A floral, solar and voluptuous <br>Olivier Polge, 
+    Perfumer-Creator <br>for the House of CHANEL.</p>
+
+    <div class="allprices"><p class="price">$149.99</p>
+      <p class="pricecut">$169.99</p></div>
+    
+
+    <button><svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg>    Add to cart</button>
+</div>
+
+</div>
+
+
+  <div class="footlinks">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Sahitya2006">Sahitya@vidyarthi</a>.
+  </div> 
+
+</body>
+</html>
